@@ -50,8 +50,7 @@ sudo apt update
 安装必要的编译工具和依赖。
 
 ```bash
-sudo apt-get install build-essential
-sudo apt-get install tcl
+apt-get -y install make g++ gcc libpcre3 libpcrecpp* libpcre3-dev libpcre3-dev libssl-dev autoconf automake libtool libncurses5-dev libaio-dev iputils-ping net-tools libncurses5 tree zlib1g  zlib1g-dev libnl-genl-3-dev libnl-route-3-dev unzip zip
 ```
 
 ### 3. 下载 Redis 源代码
@@ -135,7 +134,6 @@ tree /usr/local/redis/
 
 ```bash
 echo "vm.overcommit_memory=1" | sudo tee -a /etc/sysctl.conf
-sudo sysctl -p
 ```
 
 ### 11. 应用内核参数设置

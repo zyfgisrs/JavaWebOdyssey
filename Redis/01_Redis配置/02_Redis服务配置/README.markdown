@@ -99,13 +99,13 @@ sudo vi /usr/local/redis/conf/redis.conf
 
 ## 启动 Redis 服务
 
-使用以下命令启动 Redis 服务。
+使用以下命令启动 Redis 服务。//
 
 ```bash
 redis-server /usr/local/redis/conf/redis.conf 
 ```
 
-可能会报没有日志权限，我们使用下面命令来：
+可能会报没有日志权限，我们使用下面命令来解决：
 
 ```bash
 sudo chmod 777 /mnt/data/redis/logs/redis_6379.log
