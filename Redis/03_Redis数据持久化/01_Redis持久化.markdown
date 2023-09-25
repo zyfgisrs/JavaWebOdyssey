@@ -16,8 +16,8 @@ Redis是一个高性能的内存数据库，它的主要优势是提供了极快
 
 ## 数据持久化策略
 
-- RDB（Redis Database）
-- AOF（Append Only File）
+- RDB（Redis Database）：RDB 持久化在指定的时间间隔内对数据集进行时间点快照。
+- AOF（Append Only File） ：AOF 持久化记录服务器接收到的每一个写操作。这些操作在服务器启动时可以再次播放，从而重建原始数据集。命令使用与 Redis 协议相同的格式进行记录。
 
 ## 软件开发优化方案
 
