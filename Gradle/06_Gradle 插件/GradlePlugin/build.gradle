@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+class Myplugin1 implements Plugin<Project>{
+    @Override
+    void apply(Project project) {
+        project.task("myPluginTask1"){
+            doLast {
+                println('myPluginTask1 success!!!')
+            }
+        }
+    }
+}
+
+apply plugin: Myplugin1
+apply plugin: MyPlugin2

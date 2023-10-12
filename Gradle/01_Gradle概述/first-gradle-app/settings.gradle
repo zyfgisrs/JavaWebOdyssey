@@ -1,0 +1,3 @@
+rootProject.name = 'first-gradle-app'
+include 'sub-gradle-app'
+

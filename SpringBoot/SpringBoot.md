@@ -199,7 +199,7 @@ class StudentRecordTest {
 
 输出
 
-```
+```java
 StudentRecord[name=tom, age=15, teacherRecord=TeacherRecord[name=李老师, age=46]]
 ```
 

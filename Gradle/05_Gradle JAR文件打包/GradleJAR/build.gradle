@@ -1,0 +1,36 @@
+plugins {
+    id 'java-library' //java-library 插件区分了库的API依赖和实现依赖
+    id 'maven-publish' //可以将你的 Gradle 构建的产物（比如 JAR 文件）发布到 Maven 仓库
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    //配置发布动作
+    publications {
+        maven(MavenPublication){
+            from components.java
+
+            groupId = 'com.zhouyf.demo'
+            artifactId = 'zhouyf'
+            version = '1.0.0'
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}

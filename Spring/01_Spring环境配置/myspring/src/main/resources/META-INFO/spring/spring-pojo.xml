@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    <bean id="personBean" class="com.zhouyf.pojo.Person">-->
+<!--        <property name="name" value="John"/>-->
+<!--        <property name="age" value="30"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="studentBean" class="com.zhouyf.pojo.Student">-->
+<!--        <constructor-arg value="John"/>-->
+<!--        <constructor-arg value="20"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="authorBean" class="com.zhouyf.pojo.Author">-->
+<!--        <property name="name" value="Tom"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="articleBean" class="com.zhouyf.pojo.Article">-->
+<!--        <property name="name" value="水浒传"/>-->
+<!--        <property name="author" ref="authorBean"/>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="carBean" class="com.zhouyf.pojo.Car">-->
+<!--        <property name="brand" value="Toyota"/>-->
+<!--        <property name="engine">-->
+<!--            <bean class="com.zhouyf.pojo.Engine">-->
+<!--                <property name="model" value="V8"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="libraryBean" class="com.zhouyf.pojo.Library">-->
+<!--        <property name="books">-->
+<!--            <list>-->
+<!--                <bean class="com.zhouyf.pojo.Book">-->
+<!--                    <property name="name" value="水浒传"/>-->
+<!--                    <property name="price" value="30.4"/>-->
+<!--                 </bean>-->
+
+<!--                <bean class="com.zhouyf.pojo.Book">-->
+<!--                    <property name="name" value="西游记"/>-->
+<!--                    <property name="price" value="29.3"/>-->
+<!--                </bean>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="cityTemperatureRecorderBean" class="com.zhouyf.pojo.CityTemperatureRecorder">-->
+<!--        <property name="cityTemperatures">-->
+<!--            <map>-->
+<!--                <entry key="New York" value="16"/>-->
+<!--                <entry key="Los Angeles" value="18"/>-->
+<!--                <entry key="Miami" value="25"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="animalBean" class="com.zhouyf.pojo.Animal">-->
+<!--        <property name="sets">-->
+<!--            <set>-->
+<!--                <value>猫</value>-->
+<!--                <value>狗</value>-->
+<!--                <value>鸡</value>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="catSingle" class="com.zhouyf.pojo.Cat" scope="singleton"/>-->
+<!--    <bean id="catProto" class="com.zhouyf.pojo.Cat" scope="prototype"/>-->
+
+<!--    <bean id="dogBean" class="com.zhouyf.pojo.Dog" init-method="init" destroy-method="destroy">-->
+<!--        <property name="name" value="Tom"/>-->
+<!--    </bean>-->
+
+    <bean id="lazyBirdBean" class="com.zhouyf.pojo.Bird" lazy-init="true">
+        <property name="name" value="lazyBirdBean"/>
+    </bean>
+    <bean id="birdBean" class="com.zhouyf.pojo.Bird">
+        <property name="name" value="birdBean"/>
+    </bean>
+
+
+
+</beans>
