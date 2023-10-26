@@ -6,10 +6,7 @@
 
 ```
 implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.12.2'
-
 implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.2'
-
-
 implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.12.2'
 ```
 

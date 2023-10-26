@@ -1,0 +1,28 @@
+source:
+  mysql: mysql://localhost:3306/zhouyf
+  redis: redis://localhost:6379/0
+  messages:
+    - JAVA
+    - C++
+    - RUST
+  info:
+    javabase: java基础
+    spring: java框架
+    jvm: java虚拟机
+
+
+dept:
+  deptno: 10000
+  dname: 教学研发部门
+  company:
+    cid: 10001
+    cname: 新东方
+  emps:
+    - emp:
+      empno: 7389
+      ename: 小明
+      job: 教师
+    - emp:
+      empno: 9889
+      ename: 王航
+      job: 工程师
