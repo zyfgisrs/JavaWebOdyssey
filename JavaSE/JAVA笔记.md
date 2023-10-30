@@ -5405,7 +5405,7 @@ private native void start0();
 //是本地方法，是JVM调用，底层是c/c++实现
 ```
 
-##实现Runnable接口
+实现Runnable接口
 
 - java是单继承的，在某些情况下一个类可能已经继承了某个父类，这是在用继承Thread类方法创建线程显然不可能。
 - java设计者们提供了另外一个方式创建线程，就是通过实现Runnable接口来创建线程。

@@ -3631,7 +3631,7 @@ public class ZyfServlet implements Servlet {
 
 ### Servlet五个核心方法
 
-1.  
+1.  init()
 
 2. service()
 
