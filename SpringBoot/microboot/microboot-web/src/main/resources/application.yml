@@ -36,11 +36,13 @@ spring:
       max-request-size: 20MB #设置最大的请求文件大小、总体文件大小
       file-size-threshold: 512KB #当上传的文件大小达到指定阈值时，将文件内容写入磁盘中。
       location: / #设置上传文件临时保存目录
-  mail:
-    host: smtp.qq.com
-    username: 36075103@qq.com
-    password: fxmjcejjaqjwbjgh
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.starttls.enabled: true
-      mail.smtp.starttls.required: true
+
+server:
+  ssl:
+    key-store: classpath:my-release-key.jks
+    key-store-password: zyf2563085
+    key-store-type: JKS
+    key-alias: myalias
+  port: 8443
+
+
