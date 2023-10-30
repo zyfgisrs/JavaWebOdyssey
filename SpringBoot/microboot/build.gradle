@@ -61,7 +61,7 @@ subprojects {   // 子模块
     sourceSets {    // 源代码目录配置
         main { // main及相关子目录配置
             java { srcDirs = ['src/main/java'] }
-            resources { srcDirs = ['src/main/resources', "src/main/profiles/$env"] }
+            resources { srcDirs = ['src/main/resources', "src/main/view"] }
         }
         test { // test及相关子目录配置
             java { srcDirs = ['src/test/java'] }
@@ -126,6 +126,14 @@ project('microboot-web') { // 子模块
 project('microboot-common') { // 子模块
     dependencies { // 配置子模块依赖
         compile("org.springframework.boot:spring-boot-starter-web")
+    }
+}
+
+
+project('microboot-thymeleaf') { // 子模块
+    dependencies { // 配置子模块依赖
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     }
 }
 

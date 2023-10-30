@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/microboot-common" />
+            <option value="$PROJECT_DIR$/microboot-thymeleaf" />
             <option value="$PROJECT_DIR$/microboot-web" />
           </set>
         </option>
