@@ -1,5 +1,0 @@
-source:
-  mysql: mysql://localhost:3306/zhouyf
-  redis: redis://localhost:6379/0
-  messages: zhouyf,slp
-  info: '{"name":"zhouyf", "age":24}' #Map集合

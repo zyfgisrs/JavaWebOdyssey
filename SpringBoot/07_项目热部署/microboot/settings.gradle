@@ -1,5 +1,0 @@
-rootProject.name = 'microboot'
-include 'microboot-common'
-include 'microboot-web'
-include 'microboot-web'
-
