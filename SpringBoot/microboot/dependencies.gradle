@@ -32,5 +32,5 @@ ext.libraries = [
         //PDF生成库
         'itextpdf'                 : "com.itextpdf:itextpdf:${versions.itextpdf}",
         //Office 文档操作库
-        'easypoi'                  : "cn.afterturn:easypoi-spring-boot-starter:${versions.easypoi}"
+        'easypoi'                  : "cn.afterturn:easypoi-spring-boot-starter:${versions.easypoi}",
 ]

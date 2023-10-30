@@ -119,6 +119,7 @@ project('microboot-web') { // 子模块
         compile(libraries.'itextpdf')
         //excel相关依赖
         compile(libraries.'easypoi')
+        compile("org.springframework.boot:spring-boot-starter-mail")
     }
 }
 
