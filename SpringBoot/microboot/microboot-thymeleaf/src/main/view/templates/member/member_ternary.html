@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:object="${member}">
+        <div th:text="*{mid == 'zhouyf' ? '是周杨凡' : '不是周杨凡'}"></div>
+    </div>
+</body>
+</html>

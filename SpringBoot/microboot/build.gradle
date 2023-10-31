@@ -58,12 +58,13 @@ subprojects {   // 子模块
         testCompileOnly(libraries.'lombok')
         testAnnotationProcessor(libraries.'lombok')
     }
-    sourceSets {    // 源代码目录配置
-        main { // main及相关子目录配置
-            java { srcDirs = ['src/main/java'] }
+    sourceSets {    // 定义源代码的目录块
+        main { // 定义源代码和资源文件的目录
+            java { srcDirs = ['src/main/java'] } //定义主源代码目录
+            //定义主资源目录
             resources { srcDirs = ['src/main/resources', "src/main/view"] }
         }
-        test { // test及相关子目录配置
+        test { // 定义测试源代码和资源的目录
             java { srcDirs = ['src/test/java'] }
             resources { srcDirs = ['src/test/resources'] }
         }

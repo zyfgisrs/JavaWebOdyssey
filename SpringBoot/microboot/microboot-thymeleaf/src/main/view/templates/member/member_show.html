@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:text="'【Member属性】name = ' + ${member.name}"/>
+    <div th:text="'【Member属性】mid = ' + ${member.mid}"/>
+    <div th:text="'【Member属性】age = ' + ${member.age}"/>
+    <div th:text="'【Member属性】salary = ' + ${#numbers.formatCurrency(member.salary)}"/>
+    <div th:text="'【Member属性】birthday = ' + ${member.birthday}"/>
+</body>
+</html>

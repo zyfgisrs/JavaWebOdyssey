@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        table {ttttttt
+            border-collapse: collapse; /* 这会确保边框不会重叠 */
+            width: 70%; /* 可选：使表格宽度为100% */
+            border: 2px solid black; /* 设置表格的外边框 */
+        }
+
+        th, td {
+            border: 1px solid black; /* 为每个表头和单元格设置边框 */
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-md-6">
+        <table style="text-align: center">
+            <tr>
+                <th style="width: 10%" class="text-center">N0.</th>
+                <th style="width: 20%" class="text-center">编号</th>
+                <th style="width: 10%" class="text-center">姓名</th>
+                <th style="width: 10%" class="text-center">年龄</th>
+                <th style="width: 15%" class="text-center">月薪</th>
+                <th style="width: 20%" class="text-center">生日</th>
+            </tr>
+
+            <tr th:each="member,memberStat:${memberList}">
+                <td th:text="${memberStat.index+1}"/>
+                <td th:text="${member.mid}"/>
+                <td th:text="${member.name}"/>
+                <td th:text="${member.age}"/>
+                <td th:text="${#numbers.formatCurrency(member.salary)}"/>
+                <td th:text="${#dates.format(member.birthday, 'yyyy-MM-dd')}"/>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

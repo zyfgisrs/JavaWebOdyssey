@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:object="${member}">
+    <div th:if="*{age lt 18}">
+        年轻人，踏踏实实学好一门实用技术，才能获得你想要的未来
+    </div>
+
+    <div th:unless="*{age le 18}">
+        你已经是一个成年人了，要担负起生活和家庭的重任，加油
+    </div>
+</div>
+</body>
+</html>

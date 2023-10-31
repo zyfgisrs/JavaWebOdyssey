@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:text="'【request属性】 message = ' +  ${#httpServletRequest.getAttribute('message')}"/>
+    <div th:text="'【session属性】 message = ' +  ${#httpSession.getAttribute('message')}"/>
+    <div th:text="'【application属性】 message = ' +  ${#httpServletRequest.getServletContext().getAttribute('message')}"/>
+</body>
+</html>
