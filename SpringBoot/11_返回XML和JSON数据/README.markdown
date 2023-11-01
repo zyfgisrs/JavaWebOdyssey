@@ -1,3 +1,54 @@
+# 返回JSON数据
+
+- `com.zhouyf.vo.Message`
+
+```java
+package com.zhouyf.vo;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+public class Message {
+
+    private String title;
+    @JsonFormat(pattern = "yyyy年MM月")
+    private Date pubdate;
+    private String content;
+}
+```
+
+`com.zhouyf.action.MessageAction`
+
+```java
+package com.zhouyf.action;
+
+import com.zhouyf.common.action.abs.AbstractBaseAction;
+import com.zhouyf.vo.Message;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController//直接进行Rest架构进行处理，省略了@ResponseBody注解
+@RequestMapping("/message/*")
+public class MessageAction extends AbstractBaseAction {
+
+    @RequestMapping(value = "echo", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Message echo(Message message) {
+        message.setTitle("【ECHO】" + message.getTitle());
+        message.setContent("【ECHO】" + message.getContent());
+        return message;
+    }
+}
+```
+
+- 访问测试
+
+![image-20231101191201639](assets/image-20231101191201639.png)
+
 # 返回XML数据
 
 ## 添加依赖库
@@ -8,6 +59,7 @@
 implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.12.2'
 implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.2'
 implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.12.2'
+implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.2'
 ```
 
 - 定义依赖版本
@@ -41,12 +93,23 @@ ext.libraries = [
         'jackson-dataformat-xml'    : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${versions.jackson}",
         'com.fasterxml.jackson.core': "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
         'jackson-annotations'       : "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
+    'jackson-core'             : "com.fasterxml.jackson.core:jackson-core:${versions.jackson}",
 ]
 ```
 
 - `build.gradle`配置文件中添加依赖
 
-![image-20231020190918836](assets/image-20231020190918836.png)
+```groovy
+project('microboot-web') { // 子模块
+    dependencies { // 配置子模块依赖
+        //jackson相关依赖
+        compile(libraries.'jackson-dataformat-xml')
+        compile(libraries.'jackson-databind')
+        compile(libraries.'jackson-annotations')
+        compile(libraries.'jackson-core')
+    }
+}
+```
 
 <img src="assets/image-20231020190949073.png" alt="image-20231020190949073" style="zoom:67%;" />
 
@@ -57,59 +120,22 @@ ext.libraries = [
 ```java
 package com.zhouyf.config;
 
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.MediaType;
+import org.springframework.http.converter.BufferedImageHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-//@Configuration是一个注解，它表明随后的类是一个配置类，Spring容器会特别对待。
-@EnableWebMvc
-//主要作用是启用 Spring MVC 的配置
 public class WebConfig implements WebMvcConfigurer {
-    //这行代码定义了一个名为WebConfig的公共类，该类实现了WebMvcConfigurer接口。
-    // 通过实现此接口，可以自定义Web应用程序中的多个配置。
     @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        //重写了WebMvcConfigurer接口中的configureMessageConverters方法。
-        // 这个方法用于自定义HTTP消息转换器。
-
-        //创建FastJsonHttpMessageConverter的一个实例。
-        FastJsonHttpMessageConverter fastJsonHttpMessageConverter =
-                new FastJsonHttpMessageConverter();
-        //创建FastJsonConfig的一个实例，以便能够自定义JSON的序列化和反序列化配置。
-        FastJsonConfig config = new FastJsonConfig();
-        //这段代码调用setSerializerFeatures方法来设置各种JSON序列化选项
-        // 例如如何处理空值、日期格式、循环引用等。
-        config.setSerializerFeatures(
-                SerializerFeature.WriteMapNullValue,//允许Map内容为null
-                SerializerFeature.WriteNullListAsEmpty,//List集合为null则使用[]代替
-                SerializerFeature.WriteNullStringAsEmpty,//String内容为空使用空字符代替
-                SerializerFeature.WriteDateUseDateFormat, //日期格式化输出
-                SerializerFeature.WriteNullNumberAsZero, //数字为空使用0
-                SerializerFeature.DisableCircularReferenceDetect //禁用循环引用
-        );
-        //将自定义的FastJsonConfig配置设置到fastJsonHttpMessageConverter转换器实例中。
-        fastJsonHttpMessageConverter.setFastJsonConfig(config);
-        //转换器将仅用于JSON类型的数据
-        List<MediaType> fastjsonMediaTypes = new ArrayList<>();
-        fastjsonMediaTypes.add(MediaType.APPLICATION_JSON);
-        fastJsonHttpMessageConverter.setSupportedMediaTypes(fastjsonMediaTypes);
-        //这行代码将配置好的FastJSON消息转换器添加到转换器列表中。
-        //这确保了Spring会使用这个转换器来处理JSON消息。
-        converters.add(fastJsonHttpMessageConverter);
+    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
 
         //创建一个MappingJackson2XmlHttpMessageConverter实例
-        // 添加 XML 消息转换器
         MappingJackson2XmlHttpMessageConverter xmlConverter = new MappingJackson2XmlHttpMessageConverter();
+        //添加 XML 消息转换器
         converters.add(xmlConverter);
     }
 }
@@ -161,7 +187,7 @@ public class PersonAction {
 
 - 修改`com.zhouyf.action.MessageAction`控制器
 
-在`MessageAction`中，我们指定了`produces = MediaType.APPLICATION_JSON_VALUE`，这意味着这个方法将产生JSON响应，因此将使用FastJSON转换器。
+在`MessageAction`中，我们指定了`produces = MediaType.APPLICATION_JSON_VALUE`，这意味着这个方法将产生JSON响应。
 
 ```java
 package com.zhouyf.action;
@@ -192,3 +218,41 @@ public class MessageAction extends AbstractBaseAction {
 ![image-20231020200618820](assets/image-20231020200618820.png)
 
 可以看到`/person/info`返回了XML数据而`/message/echo`返回了JSON数据
+
+# Jackson相关注解
+
+**@JsonProperty** - 用于指示JSON属性的名称。对于那些在Java字段和JSON属性之间名称不同的情况特别有用。
+
+```java
+@Data
+public class Message {
+    @JsonProperty("标题")
+    private String title;
+    @JsonFormat(pattern = "yyyy年MM月")
+    private Date pubdate;
+    private String content;
+}
+```
+
+![image-20231101191635636](assets/image-20231101191635636.png)
+
+**@JsonIgnore** - 表示在序列化或反序列化过程中该属性应被忽略。
+
+```java
+public class Message {
+    @JsonProperty("标题")
+    private String title;
+    @JsonFormat(pattern = "yyyy年MM月")
+    private Date pubdate;
+    @JsonIgnore
+    private String content;
+}
+```
+
+![image-20231101191806294](assets/image-20231101191806294.png)
+
+**@JsonFormat** - 定制日期、时间和数字的格式。
+
+**@JsonUnwrapped** - 允许嵌套的属性在JSON中展平
+
+**@JsonInclude** - 用于控制属性的包含规则。

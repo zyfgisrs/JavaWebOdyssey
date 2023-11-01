@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
-@ServletComponentScan({"com.zhouyf.listener"}) //servlet组件扫描
+@ServletComponentScan() //servlet组件扫描
 public class MyApplication {
     public static void main(String[] args) {
         SpringApplication springApplication =

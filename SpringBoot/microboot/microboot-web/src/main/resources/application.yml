@@ -37,12 +37,21 @@ spring:
       file-size-threshold: 512KB #当上传的文件大小达到指定阈值时，将文件内容写入磁盘中。
       location: / #设置上传文件临时保存目录
 
-server:
-  ssl:
-    key-store: classpath:my-release-key.jks
-    key-store-password: zyf2563085
-    key-store-type: JKS
-    key-alias: myalias
-  port: 8443
+#server:
+#  ssl:
+#    key-store: classpath:my-release-key.jks
+#    key-store-password: zyf2563085
+#    key-store-type: JKS
+#    key-alias: myalias
+#  port: 8443
+
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
 
 

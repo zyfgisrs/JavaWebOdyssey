@@ -4,7 +4,6 @@ ext.versions = [
         junit                : '5.7.1', //配置junit测试工具的版本编号
         junitPlatformLauncher: '1.7.1',//JUnit测试工具运行平台
         lombok               : '1.18.30',
-        fastjson             : '2.0.41',
         jackson              : '2.12.2',
         itextpdf             : '5.5.13.3',
         easypoi              : '4.3.0'
@@ -22,8 +21,6 @@ ext.libraries = [
         'junit-platform-launcher'  : "org.junit.platform:junit-platform-launcher:${versions.junitPlatformLauncher}",
         //lombok
         'lombok'                   : "org.projectlombok:lombok:${versions.lombok}",
-        //FastJSON
-        'fastjson'                 : "com.alibaba:fastjson:${versions.fastjson}",
         //jackson依赖
         'jackson-dataformat-xml'   : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${versions.jackson}",
         'jackson-databind'         : "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
