@@ -16,8 +16,6 @@
 - 一个数据库中可以创建多个表，以保存数据。
 - 数据库管理系统（DBMS）、数据库和表的关系如图所示。
 
-![image-20221001213655036](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20221001213655036.png)
-
 - 表的一行称之为一条记录，在java程序中，一行记录往往使用对象来表示。
 
 # SQL语句分类

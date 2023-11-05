@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.zhouyf'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //配置Spring的核心依赖
+    implementation group: 'org.springframework', name: 'spring-context', version: '6.0.7'
+    //JUnit5测试框架
+    testImplementation group: 'org.springframework', name: 'spring-test', version: '6.0.7'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.9.2'
+    testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.9.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.9.2'
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.9.2'
+    //日志组件
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.6'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.7'
+    //lombook插件
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    //如果需要使用AspectJ的注解方式则需要引入spring-aspects
+    implementation group: 'org.springframework', name: 'spring-aspects', version: '6.0.7'
+    //Mysql数据库驱动的依赖
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+    //Spring JDBC
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '6.0.7'
+    //HikariCP数据源
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.1'
+}
+
+sourceSets {    // 定义源代码的目录块
+    main { // 定义源代码和资源文件的目录
+        java { srcDirs = ['src/main/java'] } //定义主源代码目录
+        //定义主资源目录
+        resources { srcDirs = ['src/main/resources'] }
+    }
+    test { // 定义测试源代码和资源的目录
+        java { srcDirs = ['src/test/java'] }
+        resources { srcDirs = ['src/test/resources'] }
+    }
+}
+
+
+test {  // 配置测试任务
+    useJUnitPlatform() // 使用JUnit测试平台
+}

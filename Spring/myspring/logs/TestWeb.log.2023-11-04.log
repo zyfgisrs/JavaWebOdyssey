@@ -1,0 +1,1423 @@
+2023-11-04 14:23:38.112 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+2023-11-04 14:23:38.116 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.ExampleTest@649725e3]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@757d6814 testClass = com.zhouyf.test.ExampleTest, locations = [], classes = [com.zhouyf.config.MapBeanConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1593)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{T{com.zhouyf.utils.MapUtil}.createMap()] @0: No ending suffix '}' for expression starting at character 0: #{T{com.zhouyf.utils.MapUtil}.createMap()
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:148)
+	... 94 common frames omitted
+2023-11-04 14:24:09.794 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map3': Failed to convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map'; Cannot convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map': no matching editors or conversion strategy found
+2023-11-04 14:24:09.798 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.ExampleTest@a1217f9]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@4a067c25 testClass = com.zhouyf.test.ExampleTest, locations = [], classes = [com.zhouyf.config.MapBeanConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map3': Failed to convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map'; Cannot convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map': no matching editors or conversion strategy found
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map'; Cannot convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map': no matching editors or conversion strategy found
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:76)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1365)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot convert value of type 'com.zhouyf.config.MapBeanConfig$$SpringCGLIB$$0' to required type 'java.util.Map': no matching editors or conversion strategy found
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:259)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	... 93 common frames omitted
+2023-11-04 14:25:09.140 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+2023-11-04 14:25:09.145 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.ExampleTest@649725e3]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@757d6814 testClass = com.zhouyf.test.ExampleTest, locations = [], classes = [com.zhouyf.config.MapBeanConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1593)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{T{com.zhouyf.utils.MapUtil}.createMap()] @0: No ending suffix '}' for expression starting at character 0: #{T{com.zhouyf.utils.MapUtil}.createMap()
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:148)
+	... 94 common frames omitted
+2023-11-04 14:25:27.380 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+2023-11-04 14:25:27.385 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.ExampleTest@649725e3]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@757d6814 testClass = com.zhouyf.test.ExampleTest, locations = [], classes = [com.zhouyf.config.MapBeanConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1593)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{T{com.zhouyf.utils.MapUtil}.createMap()] @0: No ending suffix '}' for expression starting at character 0: #{T{com.zhouyf.utils.MapUtil}.createMap()
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:148)
+	... 94 common frames omitted
+2023-11-04 14:26:45.948 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+2023-11-04 14:26:45.952 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.ExampleTest@c7a975a]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@743cb8e0 testClass = com.zhouyf.test.ExampleTest, locations = [], classes = [com.zhouyf.config.MapBeanConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'map1': Expression parsing failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1593)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{T(com.zhouyf.utils.MapUtil).createMap()] @0: No ending suffix '}' for expression starting at character 0: #{T(com.zhouyf.utils.MapUtil).createMap()
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:148)
+	... 94 common frames omitted
+2023-11-04 14:43:06.654 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'factoryBean': Failed to convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean'; Cannot convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean': no matching editors or conversion strategy found
+2023-11-04 14:43:06.659 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.ExampleTest@2a76b80a]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@7a56812e testClass = com.zhouyf.test.ExampleTest, locations = [], classes = [com.zhouyf.config.MapBeanConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'example': Unsatisfied dependency expressed through field 'factoryBean': Failed to convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean'; Cannot convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean': no matching editors or conversion strategy found
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean'; Cannot convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean': no matching editors or conversion strategy found
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:76)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1365)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot convert value of type 'java.util.LinkedHashMap' to required type 'org.springframework.beans.factory.FactoryBean': no matching editors or conversion strategy found
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:259)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	... 93 common frames omitted
+2023-11-04 15:10:52.221 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'transactionManager' defined in com.zhouyf.config.TransactionConfig: Unsatisfied dependency expressed through method 'transactionManager' parameter 0: No qualifying bean of type 'com.zaxxer.hikari.HikariDataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-11-04 15:10:52.229 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.TransactionManagerTest@3a94964]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@b40bb6e testClass = com.zhouyf.test.TransactionManagerTest, locations = [], classes = [com.zhouyf.config.TransactionConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'transactionManager' defined in com.zhouyf.config.TransactionConfig: Unsatisfied dependency expressed through method 'transactionManager' parameter 0: No qualifying bean of type 'com.zaxxer.hikari.HikariDataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:548)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zaxxer.hikari.HikariDataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 89 common frames omitted
+2023-11-04 15:12:12.394 [main] WARN  o.s.context.support.GenericApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'transactionConfig': Unsatisfied dependency expressed through field 'source': No qualifying bean of type 'com.zaxxer.hikari.HikariDataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-11-04 15:12:12.399 [main] ERROR o.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.zhouyf.test.TransactionManagerTest@72a85671]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@48c35007 testClass = com.zhouyf.test.TransactionManagerTest, locations = [], classes = [com.zhouyf.config.TransactionConfig], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = [], contextCustomizers = [], contextLoader = org.springframework.test.context.support.DelegatingSmartContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:141)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:97)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'transactionConfig': Unsatisfied dependency expressed through field 'source': No qualifying bean of type 'com.zaxxer.hikari.HikariDataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:693)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:482)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:221)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:110)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:212)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zaxxer.hikari.HikariDataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1824)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1383)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:710)
+	... 90 common frames omitted
+2023-11-04 16:05:05.353 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2023-11-04 16:05:05.354 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is less than 10000ms, setting to default 600000ms.
+2023-11-04 16:05:05.354 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 16:05:05.601 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2023-11-04 16:05:05.602 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 16:05:05.627 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 全部执行成功，事务提交
+2023-11-04 16:05:05.638 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 16:05:05.640 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 16:45:01.674 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2023-11-04 16:45:01.676 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is less than 10000ms, setting to default 600000ms.
+2023-11-04 16:45:01.676 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 16:45:01.897 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2023-11-04 16:45:01.898 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 16:45:01.933 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 执行失败，事务回滚
+2023-11-04 16:45:01.945 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 16:45:01.947 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 16:46:35.566 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - maxLifetime is less than 30000ms, setting to default 1800000ms.
+2023-11-04 16:46:35.568 [main] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is less than 10000ms, setting to default 600000ms.
+2023-11-04 16:46:35.568 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 16:46:35.785 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2023-11-04 16:46:35.786 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 16:46:35.819 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 执行失败，事务回滚
+2023-11-04 16:46:35.832 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 16:46:35.834 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 16:47:30.931 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 16:47:31.157 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2023-11-04 16:47:31.158 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 16:47:31.188 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 执行失败，事务回滚
+2023-11-04 16:47:31.202 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 16:47:31.204 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 16:47:52.733 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [TxMangeTest]: []
+2023-11-04 16:47:52.742 [main] DEBUG o.s.t.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [jakarta/servlet/ServletContext]
+2023-11-04 16:47:52.751 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [TxMangeTest]: [DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener]
+2023-11-04 16:47:52.752 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: class [TxMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 16:47:52.763 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.zhouyf.test.TxMangeTest
+2023-11-04 16:47:52.763 [main] DEBUG o.s.t.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class com.zhouyf.test.TxMangeTest
+2023-11-04 16:47:52.793 [main] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+2023-11-04 16:47:52.793 [main] DEBUG o.s.t.c.support.AnnotationConfigContextLoader - Registering component classes: [com.zhouyf.config.TransactionConfig, com.zhouyf.config.HikariDataSourceConfig]
+2023-11-04 16:47:52.817 [main] DEBUG o.s.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@78641d23
+2023-11-04 16:47:52.833 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2023-11-04 16:47:52.869 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxImpl.class]
+2023-11-04 16:47:52.951 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2023-11-04 16:47:52.955 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2023-11-04 16:47:52.957 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2023-11-04 16:47:52.961 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionConfig'
+2023-11-04 16:47:52.964 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSourceConfig'
+2023-11-04 16:47:52.970 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.driverClassName' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.972 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.jdbcUrl' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.972 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.username' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.972 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.password' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.972 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.readOnly' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.975 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.connectionTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.976 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.idleTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.977 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maxLifetime' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.977 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maximumPoolSize' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.977 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.minimumIdle' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 16:47:52.978 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxImpl'
+2023-11-04 16:47:52.980 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2023-11-04 16:47:52.982 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSource'
+2023-11-04 16:47:52.984 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2023-11-04 16:47:52.991 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'hikariDataSource'
+2023-11-04 16:47:52.999 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcTemplate'
+2023-11-04 16:47:53.016 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+2023-11-04 16:47:53.018 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+2023-11-04 16:47:53.021 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: class [TxMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 16:47:53.026 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+2023-11-04 16:47:53.027 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+2023-11-04 16:47:53.033 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-11-04 16:47:53.034 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............3000
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2023-11-04 16:47:53.038 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................60000
+2023-11-04 16:47:53.039 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/blog
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................60
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................20
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2023-11-04 16:47:53.040 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+2023-11-04 16:47:53.041 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2023-11-04 16:47:53.041 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 16:47:53.279 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f3f0fae
+2023-11-04 16:47:53.280 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 16:47:53.283 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [HikariProxyConnection@1788545647 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f3f0fae] for JDBC transaction
+2023-11-04 16:47:53.285 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [HikariProxyConnection@1788545647 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f3f0fae] to manual commit
+2023-11-04 16:47:53.286 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 16:47:53.286 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 16:47:53.297 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 16:47:53.297 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 16:47:53.298 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 16:47:53.298 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 16:47:53.299 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 16:47:53.299 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 16:47:53.308 [main] DEBUG o.s.jdbc.support.SQLStateSQLExceptionTranslator - Extracted SQL state class 'S1' from value 'S1009'
+2023-11-04 16:47:53.309 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Initiating transaction rollback
+2023-11-04 16:47:53.309 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Rolling back JDBC transaction on Connection [HikariProxyConnection@1788545647 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f3f0fae]
+2023-11-04 16:47:53.311 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1788545647 wrapping com.mysql.cj.jdbc.ConnectionImpl@6f3f0fae] after transaction
+2023-11-04 16:47:53.311 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 执行失败，事务回滚
+2023-11-04 16:47:53.314 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+2023-11-04 16:47:53.314 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+2023-11-04 16:47:53.315 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: class [TxMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 16:47:53.324 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4263b080 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+2023-11-04 16:47:53.324 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test class: class [TxMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 16:47:53.328 [SpringContextShutdownHook] DEBUG o.s.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@78641d23, started on Sat Nov 04 16:47:52 CST 2023
+2023-11-04 16:47:53.329 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 16:47:53.329 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-11-04 16:47:53.330 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6f3f0fae: (connection evicted)
+2023-11-04 16:47:53.331 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-11-04 16:47:53.331 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 19:30:26.391 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [TxMangeTest]: []
+2023-11-04 19:30:26.401 [main] DEBUG o.s.t.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [jakarta/servlet/ServletContext]
+2023-11-04 19:30:26.409 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [TxMangeTest]: [DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener]
+2023-11-04 19:30:26.411 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: class [TxMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:30:26.418 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.zhouyf.test.TxMangeTest
+2023-11-04 19:30:26.419 [main] DEBUG o.s.t.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class com.zhouyf.test.TxMangeTest
+2023-11-04 19:30:26.442 [main] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+2023-11-04 19:30:26.443 [main] DEBUG o.s.t.c.support.AnnotationConfigContextLoader - Registering component classes: [com.zhouyf.config.TransactionConfig, com.zhouyf.config.HikariDataSourceConfig]
+2023-11-04 19:30:26.468 [main] DEBUG o.s.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@558bdf1f
+2023-11-04 19:30:26.479 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2023-11-04 19:30:26.516 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxImpl.class]
+2023-11-04 19:30:26.598 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2023-11-04 19:30:26.602 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2023-11-04 19:30:26.603 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2023-11-04 19:30:26.610 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionConfig'
+2023-11-04 19:30:26.612 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSourceConfig'
+2023-11-04 19:30:26.620 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.driverClassName' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.621 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.jdbcUrl' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.621 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.username' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.622 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.password' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.622 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.readOnly' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.625 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.connectionTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.625 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.idleTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.627 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maxLifetime' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.627 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maximumPoolSize' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.627 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.minimumIdle' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:30:26.627 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxImpl'
+2023-11-04 19:30:26.629 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2023-11-04 19:30:26.630 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSource'
+2023-11-04 19:30:26.632 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2023-11-04 19:30:26.637 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'hikariDataSource'
+2023-11-04 19:30:26.644 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcTemplate'
+2023-11-04 19:30:26.661 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+2023-11-04 19:30:26.662 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+2023-11-04 19:30:26.664 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: class [TxMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:30:26.668 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+2023-11-04 19:30:26.670 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+2023-11-04 19:30:26.674 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-11-04 19:30:26.675 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............3000
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2023-11-04 19:30:26.678 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................60000
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2023-11-04 19:30:26.679 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/blog
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................60
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................20
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2023-11-04 19:30:26.680 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2023-11-04 19:30:26.681 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2023-11-04 19:30:26.681 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2023-11-04 19:30:26.681 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2023-11-04 19:30:26.681 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+2023-11-04 19:30:26.681 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2023-11-04 19:30:26.681 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 19:30:26.907 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47547132
+2023-11-04 19:30:26.909 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 19:30:26.912 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132] for JDBC transaction
+2023-11-04 19:30:26.913 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132] to manual commit
+2023-11-04 19:30:26.915 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:30:26.915 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:30:26.927 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:30:26.927 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:30:26.928 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:30:26.928 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:30:26.929 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:30:26.929 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:30:26.939 [main] DEBUG o.s.jdbc.support.SQLStateSQLExceptionTranslator - Extracted SQL state class 'S1' from value 'S1009'
+2023-11-04 19:30:26.940 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Initiating transaction rollback
+2023-11-04 19:30:26.940 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Rolling back JDBC transaction on Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132]
+2023-11-04 19:30:26.943 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132] after transaction
+2023-11-04 19:30:26.944 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 执行失败，事务回滚
+2023-11-04 19:30:26.945 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+2023-11-04 19:30:26.946 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+2023-11-04 19:30:26.946 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: class [TxMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:30:26.956 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+2023-11-04 19:30:26.957 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test class: class [TxMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:30:26.959 [SpringContextShutdownHook] DEBUG o.s.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@558bdf1f, started on Sat Nov 04 19:30:26 CST 2023
+2023-11-04 19:30:26.960 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 19:30:26.960 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-11-04 19:30:26.960 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47547132: (connection evicted)
+2023-11-04 19:30:26.962 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-11-04 19:30:26.962 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 19:31:01.331 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [TxMangeTest]: []
+2023-11-04 19:31:01.340 [main] DEBUG o.s.t.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [jakarta/servlet/ServletContext]
+2023-11-04 19:31:01.349 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [TxMangeTest]: [DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener]
+2023-11-04 19:31:01.350 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: class [TxMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:31:01.359 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.zhouyf.test.TxMangeTest
+2023-11-04 19:31:01.360 [main] DEBUG o.s.t.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class com.zhouyf.test.TxMangeTest
+2023-11-04 19:31:01.390 [main] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+2023-11-04 19:31:01.390 [main] DEBUG o.s.t.c.support.AnnotationConfigContextLoader - Registering component classes: [com.zhouyf.config.TransactionConfig, com.zhouyf.config.HikariDataSourceConfig]
+2023-11-04 19:31:01.421 [main] DEBUG o.s.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@558bdf1f
+2023-11-04 19:31:01.430 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2023-11-04 19:31:01.466 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxImpl.class]
+2023-11-04 19:31:01.548 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2023-11-04 19:31:01.552 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2023-11-04 19:31:01.553 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2023-11-04 19:31:01.559 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionConfig'
+2023-11-04 19:31:01.562 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSourceConfig'
+2023-11-04 19:31:01.569 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.driverClassName' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.571 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.jdbcUrl' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.571 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.username' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.572 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.password' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.572 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.readOnly' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.574 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.connectionTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.575 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.idleTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.577 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maxLifetime' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.577 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maximumPoolSize' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.577 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.minimumIdle' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:31:01.577 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxImpl'
+2023-11-04 19:31:01.579 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2023-11-04 19:31:01.580 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSource'
+2023-11-04 19:31:01.582 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2023-11-04 19:31:01.587 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'hikariDataSource'
+2023-11-04 19:31:01.592 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcTemplate'
+2023-11-04 19:31:01.610 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+2023-11-04 19:31:01.612 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+2023-11-04 19:31:01.615 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: class [TxMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:31:01.620 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+2023-11-04 19:31:01.621 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+2023-11-04 19:31:01.625 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-11-04 19:31:01.626 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............3000
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2023-11-04 19:31:01.629 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................60000
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/blog
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................60
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2023-11-04 19:31:01.630 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................20
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+2023-11-04 19:31:01.631 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2023-11-04 19:31:01.631 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 19:31:01.859 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47547132
+2023-11-04 19:31:01.861 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 19:31:01.864 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132] for JDBC transaction
+2023-11-04 19:31:01.865 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132] to manual commit
+2023-11-04 19:31:01.867 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:31:01.868 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:31:01.879 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:31:01.880 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:31:01.880 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:31:01.880 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:31:01.881 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Initiating transaction commit
+2023-11-04 19:31:01.881 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132]
+2023-11-04 19:31:01.887 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1333945918 wrapping com.mysql.cj.jdbc.ConnectionImpl@47547132] after transaction
+2023-11-04 19:31:01.892 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 全部执行成功，事务提交
+2023-11-04 19:31:01.893 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+2023-11-04 19:31:01.894 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+2023-11-04 19:31:01.895 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: class [TxMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:31:01.899 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@4b629f13 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+2023-11-04 19:31:01.899 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test class: class [TxMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:31:01.902 [SpringContextShutdownHook] DEBUG o.s.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@558bdf1f, started on Sat Nov 04 19:31:01 CST 2023
+2023-11-04 19:31:01.903 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 19:31:01.903 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-11-04 19:31:01.904 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47547132: (connection evicted)
+2023-11-04 19:31:01.905 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-11-04 19:31:01.905 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 19:45:12.791 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [TxSpMangeTest]: []
+2023-11-04 19:45:12.801 [main] DEBUG o.s.t.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [jakarta/servlet/ServletContext]
+2023-11-04 19:45:12.807 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [TxSpMangeTest]: [DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener]
+2023-11-04 19:45:12.808 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: class [TxSpMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:45:12.817 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.zhouyf.test.TxSpMangeTest
+2023-11-04 19:45:12.817 [main] DEBUG o.s.t.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class com.zhouyf.test.TxSpMangeTest
+2023-11-04 19:45:12.843 [main] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+2023-11-04 19:45:12.843 [main] DEBUG o.s.t.c.support.AnnotationConfigContextLoader - Registering component classes: [com.zhouyf.config.TransactionConfig, com.zhouyf.config.HikariDataSourceConfig]
+2023-11-04 19:45:12.885 [main] DEBUG o.s.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@78641d23
+2023-11-04 19:45:12.891 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2023-11-04 19:45:12.930 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxImpl.class]
+2023-11-04 19:45:12.931 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxSpmpl.class]
+2023-11-04 19:45:13.006 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2023-11-04 19:45:13.008 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2023-11-04 19:45:13.008 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2023-11-04 19:45:13.012 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionConfig'
+2023-11-04 19:45:13.014 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSourceConfig'
+2023-11-04 19:45:13.019 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.driverClassName' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.020 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.jdbcUrl' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.021 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.username' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.021 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.password' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.021 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.readOnly' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.023 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.connectionTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.024 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.idleTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.024 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maxLifetime' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.024 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maximumPoolSize' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.025 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.minimumIdle' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:45:13.025 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxImpl'
+2023-11-04 19:45:13.028 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2023-11-04 19:45:13.029 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSource'
+2023-11-04 19:45:13.031 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2023-11-04 19:45:13.036 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'hikariDataSource'
+2023-11-04 19:45:13.042 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcTemplate'
+2023-11-04 19:45:13.048 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxSpmpl'
+2023-11-04 19:45:13.059 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+2023-11-04 19:45:13.060 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+2023-11-04 19:45:13.062 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: class [TxSpMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:45:13.066 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+2023-11-04 19:45:13.066 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+2023-11-04 19:45:13.070 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-11-04 19:45:13.071 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............3000
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2023-11-04 19:45:13.074 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................60000
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/blog
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................60
+2023-11-04 19:45:13.076 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................20
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+2023-11-04 19:45:13.077 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2023-11-04 19:45:13.077 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 19:45:13.303 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66f659e6
+2023-11-04 19:45:13.304 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 19:45:13.308 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [HikariProxyConnection@1723518396 wrapping com.mysql.cj.jdbc.ConnectionImpl@66f659e6] for JDBC transaction
+2023-11-04 19:45:13.309 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [HikariProxyConnection@1723518396 wrapping com.mysql.cj.jdbc.ConnectionImpl@66f659e6] to manual commit
+2023-11-04 19:45:13.310 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:45:13.311 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:45:13.322 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:45:13.322 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:45:13.325 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:45:13.325 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:45:13.326 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:45:13.326 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:45:13.326 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:45:13.326 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:45:13.337 [main] DEBUG o.s.jdbc.support.SQLStateSQLExceptionTranslator - Extracted SQL state class 'S1' from value 'S1009'
+2023-11-04 19:45:13.340 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+2023-11-04 19:45:13.341 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+2023-11-04 19:45:13.342 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: class [TxSpMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:45:13.350 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+2023-11-04 19:45:13.350 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test class: class [TxSpMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:45:13.353 [SpringContextShutdownHook] DEBUG o.s.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@78641d23, started on Sat Nov 04 19:45:12 CST 2023
+2023-11-04 19:45:13.353 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 19:45:13.354 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=1, active=1, idle=0, waiting=0)
+2023-11-04 19:45:13.356 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-11-04 19:45:13.357 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 19:48:43.634 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [TxSpMangeTest]: []
+2023-11-04 19:48:43.645 [main] DEBUG o.s.t.context.util.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [jakarta/servlet/ServletContext]
+2023-11-04 19:48:43.653 [main] DEBUG o.s.t.c.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [TxSpMangeTest]: [DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener]
+2023-11-04 19:48:43.654 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test class: class [TxSpMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:48:43.665 [main] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test class com.zhouyf.test.TxSpMangeTest
+2023-11-04 19:48:43.666 [main] DEBUG o.s.t.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class com.zhouyf.test.TxSpMangeTest
+2023-11-04 19:48:43.695 [main] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+2023-11-04 19:48:43.697 [main] DEBUG o.s.t.c.support.AnnotationConfigContextLoader - Registering component classes: [com.zhouyf.config.TransactionConfig, com.zhouyf.config.HikariDataSourceConfig]
+2023-11-04 19:48:43.727 [main] DEBUG o.s.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@78641d23
+2023-11-04 19:48:43.736 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2023-11-04 19:48:43.773 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxImpl.class]
+2023-11-04 19:48:43.773 [main] DEBUG o.s.c.annotation.ClassPathBeanDefinitionScanner - Identified candidate component class: file [F:\GITHUB\JavaWebOdyssey\Spring\myspring\build\classes\java\main\com\zhouyf\service\impl\BlogServiceTxSpmpl.class]
+2023-11-04 19:48:43.856 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+2023-11-04 19:48:43.859 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+2023-11-04 19:48:43.860 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2023-11-04 19:48:43.866 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionConfig'
+2023-11-04 19:48:43.869 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSourceConfig'
+2023-11-04 19:48:43.878 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.driverClassName' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.880 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.jdbcUrl' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.880 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.username' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.880 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.password' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.880 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.readOnly' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.884 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.connectionTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.885 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.idleTimeOut' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.886 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maxLifetime' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.886 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.maximumPoolSize' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.886 [main] DEBUG o.s.core.env.PropertySourcesPropertyResolver - Found key 'zyf.database.pool.minimumIdle' in PropertySource 'class path resource [datasource.properties]' with value of type String
+2023-11-04 19:48:43.886 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxImpl'
+2023-11-04 19:48:43.889 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'transactionManager'
+2023-11-04 19:48:43.890 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'hikariDataSource'
+2023-11-04 19:48:43.892 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+2023-11-04 19:48:43.899 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Autowiring by type from bean name 'transactionManager' via factory method to bean named 'hikariDataSource'
+2023-11-04 19:48:43.904 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jdbcTemplate'
+2023-11-04 19:48:43.911 [main] DEBUG o.s.b.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'blogServiceTxSpmpl'
+2023-11-04 19:48:43.922 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+2023-11-04 19:48:43.923 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+2023-11-04 19:48:43.925 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - Before test method: class [TxSpMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:48:43.929 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+2023-11-04 19:48:43.930 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+2023-11-04 19:48:43.936 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-11-04 19:48:43.936 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+2023-11-04 19:48:43.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+2023-11-04 19:48:43.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+2023-11-04 19:48:43.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+2023-11-04 19:48:43.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+2023-11-04 19:48:43.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+2023-11-04 19:48:43.939 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............3000
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+2023-11-04 19:48:43.940 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................60000
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/blog
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................60
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................20
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+2023-11-04 19:48:43.941 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+2023-11-04 19:48:43.942 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+2023-11-04 19:48:43.942 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 19:48:44.169 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66f659e6
+2023-11-04 19:48:44.171 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 19:48:44.173 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Acquired Connection [HikariProxyConnection@1723518396 wrapping com.mysql.cj.jdbc.ConnectionImpl@66f659e6] for JDBC transaction
+2023-11-04 19:48:44.175 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Switching JDBC Connection [HikariProxyConnection@1723518396 wrapping com.mysql.cj.jdbc.ConnectionImpl@66f659e6] to manual commit
+2023-11-04 19:48:44.176 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:48:44.176 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:48:44.188 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:48:44.188 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:48:44.191 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 设置保存点com.mysql.cj.jdbc.MysqlSavepoint@21422231
+2023-11-04 19:48:44.191 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:48:44.191 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:48:44.192 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:48:44.192 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:48:44.192 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL update
+2023-11-04 19:48:44.192 [main] DEBUG org.springframework.jdbc.core.JdbcTemplate - Executing prepared SQL statement [INSERT INTO posts (title, content) VALUES (?, ?)]
+2023-11-04 19:48:44.203 [main] DEBUG o.s.jdbc.support.SQLStateSQLExceptionTranslator - Extracted SQL state class 'S1' from value 'S1009'
+2023-11-04 19:48:44.204 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 归滚到保存点com.mysql.cj.jdbc.MysqlSavepoint@21422231
+2023-11-04 19:48:44.206 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Initiating transaction commit
+2023-11-04 19:48:44.207 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Committing JDBC transaction on Connection [HikariProxyConnection@1723518396 wrapping com.mysql.cj.jdbc.ConnectionImpl@66f659e6]
+2023-11-04 19:48:44.213 [main] DEBUG o.s.jdbc.datasource.DataSourceTransactionManager - Releasing JDBC Connection [HikariProxyConnection@1723518396 wrapping com.mysql.cj.jdbc.ConnectionImpl@66f659e6] after transaction
+2023-11-04 19:48:44.213 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 全部执行成功，事务提交
+2023-11-04 19:48:44.215 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+2023-11-04 19:48:44.215 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+2023-11-04 19:48:44.216 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: class [TxSpMangeTest], method [test], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:48:44.222 [main] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@7889a1ac size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+2023-11-04 19:48:44.222 [main] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test class: class [TxSpMangeTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-11-04 19:48:44.224 [SpringContextShutdownHook] DEBUG o.s.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@78641d23, started on Sat Nov 04 19:48:43 CST 2023
+2023-11-04 19:48:44.225 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 19:48:44.225 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Before shutdown stats (total=1, active=0, idle=1, waiting=0)
+2023-11-04 19:48:44.226 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@66f659e6: (connection evicted)
+2023-11-04 19:48:44.228 [SpringContextShutdownHook] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-11-04 19:48:44.228 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 20:00:18.596 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 20:00:18.834 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34a0ef00
+2023-11-04 20:00:18.835 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 20:00:18.854 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 设置保存点com.mysql.cj.jdbc.MysqlSavepoint@59496961
+2023-11-04 20:00:18.864 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 发生错误，归滚到保存点com.mysql.cj.jdbc.MysqlSavepoint@59496961
+2023-11-04 20:00:18.871 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 事务提交
+2023-11-04 20:00:18.879 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 20:00:18.882 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-11-04 20:03:33.563 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-11-04 20:03:33.786 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34a0ef00
+2023-11-04 20:03:33.788 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-11-04 20:03:33.805 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 设置保存点com.mysql.cj.jdbc.MysqlSavepoint@59496961
+2023-11-04 20:03:33.816 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 发生错误，归滚到保存点com.mysql.cj.jdbc.MysqlSavepoint@59496961
+2023-11-04 20:03:33.823 [main] INFO  com.zhouyf.service.impl.BlogServiceImpl - 事务提交
+2023-11-04 20:03:33.834 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-11-04 20:03:33.838 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

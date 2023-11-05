@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/zhouyf/service/impl/BlogServiceDirtyRead.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/zhouyf/service/impl/BlogServiceImpl.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/zhouyf/service/impl/BlogServicePhantomRead.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/zhouyf/service/impl/BlogServiceTxImpl.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/zhouyf/service/impl/BlogServiceTxSpmpl.java" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+</project>

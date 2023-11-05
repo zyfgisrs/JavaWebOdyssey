@@ -2139,8 +2139,6 @@ public class StuService {
 }
 ```
 
-
-
 ```JAVA
 package com.zyf.proxy;
 
@@ -2214,16 +2212,12 @@ public class Test12 {
 
 ## 9.1 JDBC
 
-![image-20230401100448921](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230401100448921.png)
-
 JDBC的连接：
 
 - JDBC-ODBC的连接（不再使用）
 - JDBC网络连接模式
 
 JDBC的开发之中，一定要配置相应的数据库的驱动程序后才可以使用。无论什么样的Java数据库开发框架，核心本质就是JDBC。可是JDBC标准里面的所定义的操作结构是属于较为底层的操作形式，所以使用起来非常繁琐，所有项目都要加载驱动、创建数据库、创建连接、创建数据库的操作对象、关闭数据路连接等，只有CRUD操作是有区别的，那么就要考虑对JDBC的封装，那么这是时候就有了ORMapping组件（采用对象的形式实现JDBC的开发操作）。
-
-![image-20230401101405230](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230401101405230.png)
 
 ORMapping组件：
 
@@ -2237,13 +2231,9 @@ ORMapping组件：
 
 JDBC vs JdbcTemplate
 
-![image-20230401102205652](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230401102205652.png)
-
 按照性能来讲，使用JDBC开发性能是最高的。
 
 ## 9.2 配置数据源
-
-![image-20230401104311931](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230401104311931.png)
 
 jdk提供了DataSource规定了连接数据库的规范，Spring提供了实现了DataSource接口的子类来创建数据库连接池（数据源），在这里我们使用DriverMangerDataSource这一个实现子类，位于`package org.springframework.jdbc.datasource`，我们将DriverMangerDataSource注入到Spring容器，让Spring来进行管理。DriverMangerDataSource需要jdbc连接到mysql的驱动（mysql-connector包中），url、username和password。
 
@@ -2440,8 +2430,6 @@ class TestDataSource {
 
 JdbcTemplate是Spring框架中的一个核心组件，它是一个简单的JDBC封装类，用于简化JDBC编程。它提供了一组简单的方法，允许您通过使用占位符参数和自动转换来执行SQL查询、更新和批处理。
 
-![image-20230401150037505](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230401150037505.png)
-
 JdbcTemplate之中可以通过其继承的jdbcAccessor父类实现DataSource接口实例的配置，同时考虑到JDBC开发之中数据源是一个核心话题，所以会在InitializingBean初始化操作后进行检查，如果发现当没有DataSource实例就抛出异常。
 
 JdbcTemplate配置
@@ -2629,8 +2617,6 @@ public interface TransactionExecution {
 }
 ```
 
-![image-20230331193511480](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230331193511480.png)
-
 上图可以看出，Spring中提供了以上接口规定了事务实现的标准，各个框架需要提供相应的子类去实现Spring事务的接口，引入指定的事务操作。
 
 ## 6.3 编程式的事务控制
@@ -2758,8 +2744,6 @@ transactionManager提交和回滚的处理方法，仅仅是Spring提供的事�
 
 在开启事务的时候会返回一个TransactionStatus接口实例，而后在提交或回滚事务的时候需要针对于指定的status实例进行处理。
 
-![image-20230401211447752](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230401211447752.png)
-
 - DefaultTransactionStatus是TransactionStatus默认的实现子类，而后该类并不是直接实例化的，而是通过事务管理器负责实例化处理的，status所得到的是一个事务的处理标记，而后依照此标记管理事务。
 - TransactionStatus实例的创建代表了事务的开启。
 - 事务的完成决定于commit()或rollback()的方法是否正常执行，正常执行了就表示事务处理完成，相反，未执行的时候事务一定是未完成的。
@@ -2857,11 +2841,7 @@ transactionManager提交和回滚的处理方法，仅仅是Spring提供的事�
 
 在控制台中演示隔离级别和脏读、幻读和不可重复读。首先创建一个account表（id、name和money），表中已经有三条数据。
 
-![image-20230402115931639](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230402115931639.png)
-
 控制台开启两个客户端程序分别为A客户端和B客户端
-
-![image-20230402120246933](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230402120246933.png)
 
 **演示脏读：**
 
@@ -4722,8 +4702,8 @@ import org.springframework.expression.spel.standard.SpelExpressionParser;
 public class SPEL {
 
     public static void main(String[] args) {
-        String context1 = "#{T(java.lang.String)}";//toUpperCase()方法
-        String context2 = "#{T(java.util.Date)}";//
+        String context1 = "#{T(java.lang.String)}";
+        String context2 = "#{T(java.util.Date)}";
         String context3 = "#{T(java.util.Arrays)}";
         System.out.println("" + spel(context1) + " 类型：" + spel(context1).getClass());
         System.out.println("" + spel(context2) + " 类型：" + spel(context2).getClass());
