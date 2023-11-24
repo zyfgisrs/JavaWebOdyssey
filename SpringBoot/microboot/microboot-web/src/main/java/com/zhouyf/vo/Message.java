@@ -3,7 +3,6 @@ package com.zhouyf.vo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 @Data

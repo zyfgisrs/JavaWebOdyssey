@@ -5722,11 +5722,7 @@ public abstract class PropertySource<T> {
 
 PropertySource是一个抽象类，肯定要有与之相关的实现子类，那么直接通过IDEA查看这些子类可以发现如下信息，这些子类之中实际上也是包含有各类的继承结构：
 
-![image-20230411191721932](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230411191721932.png)
-
 发现不同的子类可以保存有不同的数据类型，例如：PropertiesPropertySource可以保存的是properties对象实例，而对应的MapPropertySource那么就可以保存Map接口的实例。
-
-![image-20230411192342522](C:\Users\zhouyangfan\AppData\Roaming\Typora\typora-user-images\image-20230411192342522.png)
 
 范例：使用MapPropertySource资源管理
 
