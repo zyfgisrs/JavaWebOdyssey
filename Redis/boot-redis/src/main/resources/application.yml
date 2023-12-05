@@ -1,0 +1,21 @@
+spring:
+  data:
+    redis:
+      host: 192.168.136.128
+      port: 6379
+      username: default
+      password: 12345
+      database: 0
+      connect-timeout: 5000
+      lettuce:
+        pool:
+          max-active: 1000
+          max-idle: 20
+          max-wait: 100
+          time-between-eviction-runs: 2000 #每两秒回收空闲的连接
+
+logging:
+  level:
+    root: info  #全局级别
+    com.zhouyf: debug #局部级别
+
