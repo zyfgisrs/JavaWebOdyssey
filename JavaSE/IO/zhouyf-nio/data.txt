@@ -1,0 +1,364 @@
+ava NIO中的buffer是一个用于存储数据的容器，它是NIO中数据操作的基础。buffer本质上是一块可以写入数据，然后可以从中读取数据的内存。这块内存被包装成NIO Buffer对象，并提供了一组方法，用来方便访问该块内存。
+
+buffer有以下四个重要的属性：
+
+容量（capacity）：capacity指的是buffer能够容纳元素的最大数量，这个值在buffer创建时被设定，而且不能够改变。
+上界（limit）：limit指的是buffer中第一个不能读写的元素的数组下标索引，也可以认为是buffer中实际元素的数量。
+位置（position）：position指的是下一个要被读写的元素的数组下标索引，该值会随get()和put()的调用自动更新。
+标记（mark）：一个备忘位置，调用mark()方法的话，mark值将存储当前position的值，等下次调用reset()方法时，会设定position的值为之前的标记值。
+buffer的四个属性之间的关系如下：
+
+position <= limit <= capacity
+buffer的使用流程如下：
+
+创建一个buffer，指定其容量和数据类型。
+将数据写入buffer。
+从buffer中读取数据。
+释放buffer。
+Java NIO提供了多种buffer类型，对应不同的数据类型。常见的buffer类型包括：
+
+ByteBuffer：用于存储字节数据。
+CharBuffer：用于存储字符数据。
+ShortBuffer：用于存储短整型数据。
+IntBuffer：用于存储整型数据。
+LongBuffer：用于存储长整型数据。
+FloatBuffer：用于存储浮点型数据。
+DoubleBuffer：用于存储双精度浮点型数据。
+buffer是Java NIO中非常重要的概念，它是NIO中数据操作的基础。掌握buffer的使用，是学习Java NIO的基础。
+
+profile picture
+为什么使用buffer可以提升io的效率
+
+1
+使用buffer可以提升IO效率的原因主要有以下几个：
+
+减少系统调用次数：在使用buffer时，数据不是直接写入磁盘或输出流，而是先写入缓冲区，当缓冲区满时再一次性写入磁盘或输出流。这样可以减少系统调用的次数，从而提高I/O操作的效率。
+
+减少磁盘读写次数：在使用buffer时，当需要读取数据时，缓冲流会先从缓冲区中读取数据，如果缓冲区中没有足够的数据，则会一次性从磁盘或输入流中读取一定量的数据。同样地，当需要写入数据时，缓冲流会先将数据写入缓冲区，如果缓冲区满了，则会一次性将缓冲区中的数据写入磁盘或输出流。这样可以减少磁盘读写的次数，从而提高I/O操作的效率。
+
+提高数据传输效率：在使用buffer时，由于数据是以块的形式进行传输，因此可以减少数据传输的次数，从而提高数据传输的效率。
+
+具体来说，可以举个例子来说明：
+
+假设我们需要从磁盘中读取100MB的数据，如果不使用buffer，那么我们需要进行100000次读操作，每次读取100字节。而如果使用buffer，我们可以一次性从磁盘中读取100000字节，然后将数据写入buffer中。这样，我们只需要进行一次读操作，就可以读取到所需要的数据，从而提高了I/O效率。
+
+当然，使用buffer也有一些缺点，比如需要额外分配内存，以及需要手动管理buffer。但是总体而言，使用buffer可以提高I/O效率，因此在实际开发中，我们应该尽量使用buffer。
+
+Sources
+javabetter.cn/io/buffer.html
+profile picture
+讲解一下buffer的这三个属性：pos=4 lim=10 cap=10
+在 Java NIO 中，buffer 有以下四个重要的属性：
+
+容量（capacity）：capacity 指的是 buffer 能够容纳元素的最大数量，这个值在 buffer 创建时被设定，而且不能够改变。
+上界（limit）：limit 指的是 buffer 中第一个不能读写的元素的数组下标索引，也可以认为是 buffer 中实际元素的数量。
+位置（position）：position 指的是下一个要被读写的元素的数组下标索引，该值会随 get() 和 put() 的调用自动更新。
+标记（mark）：一个备忘位置，调用 mark() 方法的话，mark 值将存储当前 position 的值，等下次调用 reset() 方法时，会设定 position 的值为之前的标记值。
+在您给出的示例中，pos=4，lim=10，cap=10。这意味着：
+
+buffer 的容量为 10，也就是可以容纳 10 个元素。
+buffer 的上界为 10，也就是 buffer 中实际元素的数量为 10。
+buffer 的位置为 4，也就是下一个要被读写的元素的数组下标索引为 4。
+换句话说，buffer 中已经写入了 4 个元素，可以继续写入 6 个元素。
+
+具体来说，假设 buffer 中存储的是字节数据，那么如下图所示：
+
+0  1  2  3  4  5  6  7  8  9
+|   |   |   |   |   |   |   |   |   |
+其中，0~3 位置上的元素已经被写入，4~9 位置上的元素可以被写入。
+
+在实际使用中，我们可以根据需要调整 buffer 的属性。例如，如果我们知道需要读取的数据量，那么可以将 buffer 的容量设置为相应的数据量。这样可以提高 I/O 效率。
+
+profile picture
+public class ZhouyfNIO {
+    public static void main(String[] args) {
+        IntBuffer buf = IntBuffer.allocate(10);
+        System.out.println("capacity "+buf.capacity()+" limit: "+ buf.limit()+" position: "+ buf.position());
+        buf.put(3);
+        buf.put(new int[]{1,2,3});
+        System.out.println("capacity "+buf.capacity()+" limit: "+ buf.limit()+" position: "+ buf.position());
+        buf.flip();
+        System.out.println("capacity "+buf.capacity()+" limit: "+ buf.limit()+" position: "+ buf.position());
+    }
+}
+
+为什么flip之后，capacity 10 limit: 4 position: 0
+我来解释一下为什么在调用 flip() 方法之后，buffer 的属性变为 capacity 10，limit 4，position 0。
+
+Buffer的初始状态
+
+capacity：10（表示buffer的最大容量是10个元素）
+limit：10（初始化时limit等于capacity，表示buffer可以写入10个元素）
+position：0（表示下一个要写入的元素的索引是0，也就是buffer的开头）
+写入数据
+
+调用 buf.put(3) 写入一个元素3，position变为1。
+调用 buf.put(new int[]{1,2,3}) 写入三个元素1、2、3，position变为4。
+flip()方法的作用
+
+将buffer从写模式切换到读模式，以便读取之前写入的数据。
+具体操作是：
+将limit设置为position，表示buffer中可读元素的数量为之前写入的元素数量。
+将position设置为0，表示从buffer的开头开始读取数据。
+flip()之后的状态
+
+capacity：10（容量不变）
+limit：4（limit被设置为之前的position，表示可读元素数量为4）
+position：0（position被设置为0，表示从buffer的开头开始读取）
+总结
+
+flip() 方法是用于切换 buffer 的读写模式的关键方法。
+在写入数据之后，调用 flip() 方法可以将 buffer 准备好用于读取数据。
+flip() 方法会设置 limit 为之前的 position，并将 position 设置为 0，以便从 buffer 的开头开始读取数据。
+profile picture
+什么是零拷贝
+零拷贝（Zero-Copy）是一种 I/O 操作优化技术，可以快速高效地将数据从一个地方移动到另一个地方，而不需要将其从内核空间复制到用户空间，或者从用户空间复制到内核空间。
+
+在传统的 I/O 操作中，数据需要从一个地方复制到另一个地方，这需要 CPU 的参与，并且涉及用户态与内核态的多次切换，加重了 CPU 负担。零拷贝技术可以避免这种数据拷贝，从而提高 I/O 操作的效率。
+
+零拷贝技术可以通过多种方式实现，常见的实现方式包括：
+
+内核空间直接传输（Kernel-to-Kernel Transfer）：将数据直接从一个内核空间缓冲区传输到另一个内核空间缓冲区，无需经过用户空间。
+直接 I/O（Direct I/O）：允许用户空间进程直接访问内核空间的缓冲区，无需经过用户空间缓冲区。
+内存映射文件（Memory-Mapped File）：将文件映射到内存中，这样用户空间进程就可以直接访问文件数据，无需将文件数据复制到内存中。
+零拷贝技术可以应用于多种场景，例如：
+
+网络传输：可以将数据直接从内核空间的缓冲区传输到网络接口，无需经过用户空间缓冲区。
+文件传输：可以将数据直接从内核空间的缓冲区传输到文件系统，无需经过用户空间缓冲区。
+内存拷贝：可以将数据直接从一个内核空间缓冲区拷贝到另一个内核空间缓冲区，无需经过用户空间缓冲区。
+零拷贝技术可以显著提高 I/O 操作的效率，因此在实际开发中得到了广泛应用。
+
+profile picture
+DirectByteBuffer和HeapByteBuffer的区别
+DirectByteBuffer和HeapByteBuffer都是NIO中的ByteBuffer，它们的区别主要体现在以下几个方面：
+
+内存分配位置：DirectByteBuffer在堆外内存中分配，HeapByteBuffer在堆内存中分配。
+垃圾回收：DirectByteBuffer不受垃圾回收器控制，HeapByteBuffer受垃圾回收器控制。
+零拷贝：DirectByteBuffer支持零拷贝，HeapByteBuffer不支持零拷贝。
+内存分配位置
+
+DirectByteBuffer在堆外内存中分配，也就是说，该内存由操作系统直接管理，不受Java虚拟机（JVM）的控制。HeapByteBuffer在堆内存中分配，也就是说，该内存由JVM直接管理，受JVM的垃圾回收器控制。
+
+垃圾回收
+
+DirectByteBuffer不受垃圾回收器控制，也就是说，JVM不会自动回收DirectByteBuffer所占用的内存。因此，开发人员需要自行负责DirectByteBuffer的内存管理，可以使用directByteBuffer.free()方法手动释放DirectByteBuffer所占用的内存。HeapByteBuffer受垃圾回收器控制，也就是说，JVM会自动回收HeapByteBuffer所占用的内存。
+
+零拷贝
+
+DirectByteBuffer支持零拷贝，也就是说，可以将数据直接从内核空间的缓冲区传输到DirectByteBuffer中，或者将数据直接从DirectByteBuffer传输到内核空间的缓冲区。HeapByteBuffer不支持零拷贝，也就是说，将数据从内核空间的缓冲区传输到HeapByteBuffer中，或者将数据从HeapByteBuffer传输到内核空间的缓冲区，都需要进行数据拷贝。
+
+使用场景
+
+DirectByteBuffer和HeapByteBuffer的使用场景主要取决于具体的需求。如果需要支持零拷贝，或者需要频繁地进行内核空间和用户空间之间的数据传输，那么可以使用DirectByteBuffer。如果不需要支持零拷贝，或者不需要频繁地进行内核空间和用户空间之间的数据传输，那么可以使用HeapByteBuffer。
+
+总结
+
+DirectByteBuffer和HeapByteBuffer各有优缺点，在实际开发中，应该根据具体的需求选择合适的ByteBuffer类型。
+
+profile picture
+使用一个案例教我NIO中channel的使用方法
+
+1
+
+2
+好的，让我们来看看使用NIO中Channel的案例。
+
+案例：从一个文件中读取数据
+
+Java
+import java.io.File;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+
+public class FileChannelRead {
+
+    public static void main(String[] args) throws IOException {
+        // 创建一个File对象
+        File file = new File("test.txt");
+
+        // 获取FileChannel
+        FileChannel fileChannel = new FileInputStream(file).getChannel();
+
+        // 创建一个ByteBuffer对象
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+        // 从FileChannel中读取数据到ByteBuffer中
+        while (fileChannel.read(byteBuffer) != -1) {
+            // 切换ByteBuffer到读模式
+            byteBuffer.flip();
+
+            // 从ByteBuffer中读取数据
+            byte[] bytes = new byte[byteBuffer.limit()];
+            byteBuffer.get(bytes);
+
+            // 输出读取到的数据
+            System.out.println(new String(bytes));
+
+            // 清空ByteBuffer
+            byteBuffer.clear();
+        }
+
+        // 关闭FileChannel
+        fileChannel.close();
+    }
+}
+Use code with caution. Learn more
+案例分析
+
+在该案例中，我们需要从一个文件中读取数据。首先，我们需要创建一个File对象，然后获取FileChannel。FileChannel提供了读取和写入文件的功能。
+
+接下来，我们需要创建一个ByteBuffer对象。ByteBuffer用于存储数据。在该案例中，我们将使用ByteBuffer来存储从文件中读取到的数据。
+
+然后，我们可以使用FileChannel的read()方法将数据从文件中读取到ByteBuffer中。read()方法会返回读取到的字节数。如果没有更多数据可读，read()方法将返回-1。
+
+读取到数据后，我们需要将ByteBuffer切换到读模式。ByteBuffer有两种模式：读模式和写模式。在读模式下，我们可以从ByteBuffer中读取数据。在写模式下，我们可以向ByteBuffer中写入数据。
+
+切换到读模式后，我们可以使用ByteBuffer的get()方法将数据从ByteBuffer中读取出来。get()方法会返回ByteBuffer中指定位置的字节。
+
+最后，我们需要清空ByteBuffer。清空ByteBuffer会将ByteBuffer中的数据清除。
+
+案例运行结果
+
+如果我们将test.txt文件的内容设置为“Hello, world!”，那么该案例的运行结果如下：
+
+Hello, world!
+其他案例
+
+除了从文件中读取数据之外，我们还可以使用NIO中的Channel来进行以下操作：
+
+从套接字中读取数据
+向套接字中写入数据
+从管道中读取数据
+向管道中写入数据
+从文件描述符中读取数据
+向文件描述符中写入数据
+NIO提供了丰富的Channel类型，满足了我们各种数据传输的需求。
+
+Sources
+github.com/599166320/druid
+github.com/Kimcatt/java
+profile picture
+NIO中channel是什么
+View other drafts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+2
+NIO中的Channel是一个连接I/O服务的管道。它可以用于读取和写入数据，也可以用于连接两个Channel。
+
+NIO中的Channel主要有以下特点：
+
+双向性：Channel可以用于读取和写入数据，而流只能用于读取或写入数据。
+异步性：Channel可以用于异步读写数据，而流只能用于同步读写数据。
+缓冲区：Channel使用ByteBuffer来存储数据，而流直接操作底层的I/O设备。
+NIO中的Channel可以分为以下几种类型：
+
+FileChannel：用于读取和写入文件。
+SocketChannel：用于读取和写入套接字。
+ServerSocketChannel：用于监听套接字连接。
+DatagramChannel：用于读取和写入UDP数据包。
+Pipe.SinkChannel：用于向管道中写入数据。
+Pipe.SourceChannel：用于从管道中读取数据。
+NIO中的Channel提供了丰富的操作方法，可以满足我们各种数据传输的需求。
+
+Channel的使用示例
+
+以下是一个从文件中读取数据的示例：
+
+Java
+import java.io.File;
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+
+public
+
+class
+
+FileChannelRead
+
+{
+
+    public
+
+static
+
+void
+
+main(String[] args)
+
+throws IOException {
+        // 创建一个File对象
+        File file = new File("test.txt");
+
+        // 获取FileChannel
+        FileChannel fileChannel = new FileInputStream(file).getChannel();
+
+        // 创建一个ByteBuffer对象
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+        // 从FileChannel中读取数据到ByteBuffer中
+        while (fileChannel.read(byteBuffer) != -1) {
+            // 切换ByteBuffer到读模式
+            byteBuffer.flip();
+
+            // 从ByteBuffer中读取数据
+            byte[] bytes = new byte[byteBuffer.limit()];
+            byteBuffer.get(bytes);
+
+            // 输出读取到的数据
+            System.out.println(new String(bytes));
+
+            // 清空ByteBuffer
+            byteBuffer.clear();
+        }
+
+        // 关闭FileChannel
+        fileChannel.close();
+    }
+}
+Use code with caution. Learn more
+该示例首先创建一个File对象，然后获取FileChannel。FileChannel提供了读取和写入文件的功能。
+
+接下来，我们创建一个ByteBuffer对象。ByteBuffer用于存储数据。在该案例中，我们将使用ByteBuffer来存储从文件中读取到的数据。
+
+然后，我们可以使用FileChannel的read()方法将数据从文件中读取到ByteBuffer中。read()方法会返回读取到的字节数。如果没有更多数据可读，read()方法将返回-1。
+
+读取到数据后，我们需要将ByteBuffer切换到读模式。ByteBuffer有两种模式：读模式和写模式。在读模式下，我们可以从ByteBuffer中读取数据。在写模式下，我们可以向ByteBuffer中写入数据。
+
+切换到读模式后，我们可以使用ByteBuffer的get()方法将数据从ByteBuffer中读取出来。get()方法会返回ByteBuffer中指定位置的字节。
+
+最后，我们需要清空ByteBuffer。清空ByteBuffer会将ByteBuffer中的数据清除。
+
+Sources
+github.com/599166320/druid
+github.com/Kimcatt/java

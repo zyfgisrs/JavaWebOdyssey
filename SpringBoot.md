@@ -3271,8 +3271,6 @@ public class MyBatisTest {
   1. 先通过@Results定义列的映射关系，@ResultMap可以来复用已定义的映射关系。
   2. 在xml中定义`<resultMap id = "xxx">`，在代码中使用`@ResultMap(value=“xml中的id”)`
 
-
-
 编写一个ArticleDao接口，定义一个方法queryById根据id查询记录
 
 ```java

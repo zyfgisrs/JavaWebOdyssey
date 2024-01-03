@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: localhost
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1
